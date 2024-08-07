@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIF Display and Voting</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Include jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Include jQuery Form Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+</head>
+<script>
+$('#bootstrapForm').submit(function (event) {
+    event.preventDefault()
+    var extraData = {}
+    $('#bootstrapForm').ajaxSubmit({
+        data: extraData,
+        dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
+        error: function () {
+            // Submit of form should be successful but JSONP callback will fail because Google Forms
+            // does not support it, so this is handled as a failure.
+            alert('Form Submitted. Thanks.')
+            // You can also redirect the user to a custom thank-you page:
+            // window.location = 'http://www.mydomain.com/thankyoupage.html'
+        }
+    })
+})
+</script>
+
+<body>
+    <div class="gallery">
+        <div class="image-container">
+            <img src="assets/Paper_Video/kubrick/1.gif" alt="Kubrick GIF">
+            <p><span class="label" id="label-a">A:</span> Kubrick</p>
+        </div>
+        <div class="image-container">
+            <img src="assets/Paper_Video/luma/1.gif" alt="Luma GIF">
+            <p><span class="label" id="label-b">B:</span> Luma</p>
+        </div>
+        <div class="image-container">
+            <img src="assets/Paper_Video/pika/1.gif" alt="Pika GIF">
+            <p><span class="label" id="label-c">C:</span> Pika</p>
+        </div>
+        <div class="image-container">
+            <img src="assets/Paper_Video/runway/1.gif" alt="Runway GIF">
+            <p><span class="label" id="label-d">D:</span> Runway</p>
+        </div>
+    </div>
+
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeZzcKpeqsZekKznOkjEzZQmpM3O85QYFAkSSK7N1dJvBQbpw/formResponse"
+    target="_self"
+    id="bootstrapForm"
+    method="POST">
+  <fieldset>
+      <h2>Kubrick01<br><small></small></h2>
+  </fieldset>
+
+
+  <!-- Field type: "choices" id: "743611367" -->
+  <fieldset>
+      <legend for="743611367">A man looking like Elon Musk is cheering and waving his arms, with a rocket and a Cybertruck behind him.</legend>
+      <div class="form-group">
+          <div class="radio">
+              <label>
+                  <input type="radio" name="entry.949497974" value="A" >
+                  A
+              </label>
+          </div>
+          <div class="radio">
+              <label>
+                  <input type="radio" name="entry.949497974" value="B" >
+                  B
+              </label>
+          </div>
+          <div class="radio">
+              <label>
+                  <input type="radio" name="entry.949497974" value="C" >
+                  C
+              </label>
+          </div>
+          <div class="radio">
+              <label>
+                  <input type="radio" name="entry.949497974" value="D" >
+                  D
+              </label>
+          </div>
+      </div>
+  </fieldset>
+
+  <input type="hidden" name="fvv" value="1">
+  <input type="hidden" name="fbzx" value="1591745806829291290">
+  <!--
+      CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
+      This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
+      Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
+      We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
+  -->
+  <input type="hidden" name="pageHistory" value="0">
+
+  <input class="btn btn-primary" type="submit" value="Submit">
+</form>
+
+</body>
+</html>
