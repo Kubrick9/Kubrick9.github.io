@@ -1,208 +1,223 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Authorship</title>
+    <title>Princess Topic</title>
     <style>
-        .blue-text {
-            color: blue; /* This sets the color of the text to blue */
-        }
-        .larger-font {
-            font-size: 16px; /* Adjust the size as needed */
-        }
-        .content-container {
-          display: flex;
-          flex-direction: column;
-          align-items: center; /* 确保内容垂直居中 */
-          justify-content: center; /* 确保内容水平居中 */
-          width: 100%; /* 宽度调整为100% */
-          max-width: 1200px; /* 最大宽度，可以根据需要调整，确保内容不会过宽 */
-          margin: 0 auto; /* 自动外边距确保居中 */
-          padding: 20px; /* 添加一些内边距 */
-        }
-        .regular-size-video, .text-content, .video-prompt {
-            width: 640px;  /* This width should match the width of your video or image presentation */
-            box-sizing: border-box; /* Ensures padding and borders are included in the width */
-        }
-        .text-content {
-            text-align: center;
-            margin-bottom: 20px; /* Adds space between text and video */
-        }
-        .text-content-vote {
-            text-align: center;
-            margin-bottom: 20px; /* Adds space between text and video */
-        }
-        .video-prompt {
-            text-align: left;
-            padding: 10px 20px;
-            background-color: #d0d5ec;
-            margin-bottom: 9px;
-        }
-        .text-center {
-            text-align: center;
-        }
-        .list-inline {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .list-inline li {
-            margin: 10px 20px;
-            align-items: center;
-            text-align: center;
-        }
-        .author a {
-            display: block; /* Makes the link block level for better click area */
-            color: #007bff; /* Link color */
-            text-decoration: none; /* No underline */
-            font-size: 1.1em;
-        }
-        .affiliation {
-            font-size: 0.9em;
-            color: #666;
-        }
-    </style>
-
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Kubrick: Multimodal Agent Collaborations for Video Generation</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+      .gallery {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+          padding: 20px;
+          max-width: 1200px;
+          margin: auto;
+      }
+      .video-container {
+          text-align: center;
+          background-color: #f8f8f8;
+          border: 1px solid #ccc;
+          padding: 10px;
+      }
+      video {
+          width: 100%;
+          height: auto;
+      }
+      .label {
+          font-size: 16px;
+          color: #333;
+          margin-top: 8px;
+          font-weight: bold;
+      }
+      table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 20px;
+      }
+      th, td {
+          border: 1px solid #ccc;
+          padding: 8px;
+          text-align: left;
+      }
+      th {
+          background-color: #eee;
+      }
+      .radio-inline {
+          margin-right: 15px;
+      }
+  </style>
+    <!-- Include jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Include jQuery Form Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(function() {
+        $('#bootstrapForm').submit(function(event) {
+            event.preventDefault(); // Prevent the form from submitting the default way
+            var formData = $(this).serialize(); // Serialize the form data
+            $.ajax({
+                url: $(this).attr('action'), // or the URL you are posting to
+                type: 'POST', // Use POST as method
+                data: formData,
+                success: function(data) {
+                    alert('Form Submitted. Thanks.');
+                },
+                error: function() {
+                    alert('Error submitting form.');
+                }
+            });
+        });
+    });
+    </script>
 </head>
-
-
 <body>
-    <div class="content-container" id="main">
-
-        <div class="text-content text-center"> <!-- Applies the styling for text width and centers the text -->
-            <h1><b>Kubrick: Multimodal Agent Collaborations for Video Generation</b></h1>
-        </div>
-
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <ul class="list-inline">
-                    <li class="author">
-                        <a href="https://Arking1995.github.io/" target="_blank">Liu He</a>
-                        <span class="affiliation">Purdue University</span>
-                    </li>
-                    <li class="author">
-                        <a href="https://scholar.google.com/citations?user=IUj5R3EAAAAJ&hl=en" target="_blank">Yizhi Song</a>
-                        <span class="affiliation">Purdue University</span>
-                    </li>
-                    <li class="author">
-                        <a href="https://www.huanghejun.com" target="_blank">Hejun Huang</a>
-                        <span class="affiliation">Baidu USA</span>
-                    </li>
-                    <li class="author">
-                        <a href="https://scholar.google.com/citations?user=jd1S28YAAAAJ&hl=en&oi=sra" target="_blank">Xin Zhou</a>
-                        <span class="affiliation">Baidu USA</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-      </div>
-
-      <div class="text-content">
-        <h2>Comparison!</h2>
-        <p>Build a Comparison between Kubrick, Pika, Runway, and Luma.</p>
-        <ul style="list-style-type: none; padding: 0;"> <!-- Remove default list styling and padding -->
-            <li><a href="voting/vote_elon.html">Vote for Elon Musk's Video</a></li>
-            <li><a href="voting/vote_dva.html">Vote for DVA's Video</a></li>
-            <li><a href="voting/vote_princess.html">Vote for Blonde Princess's Video</a></li>
-            <li><a href="voting/vote_spiderman.html">Vote for Spider Man's Video</a></li>
-        </ul>
-    </div>
-    
-
-
-    <div class="text-content">
-        <h2>Eureka!</h2>
-        <p>Build the first multimodal agent-based video generation pipeline through 3D engine scripting.</p>
-        <h3>How it works</h3>
-        <p>Given any text prompt, multimodal agents collaborate to produce detailed Blender scripts to generate video with plausible character and motion consistency in any length.</p>
-        <h3>Demo</h3>
-    </div>
-
-            
-    <!-- Spider Man -->
-    <div class="video-prompt">
-        <h6>
-            <span style="font-size: larger; color: blue;"><strong>Input prompt: </strong></span>
-            <span style="font-size: larger;"><strong> Show Spider-Man jumping off a skyscraper in a metropolitan city at night, emphasizing his bold descent against the city lights.</strong></span>
-        </h6>
+  <div class="gallery">
+    <div class="video-container">
+        <video controls autoplay loop muted playsinline>
+            <source src="../assets/Paper_Video/kubrick/01.mp4" type="video/mp4">
+            Your browser does not support this video.
+        </video>
+        <p class="label">A: Kubrick</p>
     </div>
     <div class="video-container">
-        <video class="regular-size-video" poster="img/teaser_frame.jpg" autoplay loop muted controls playsinline>
-          <source src="./assets/spiderman_video_smooth_asimov.mp4" type="video/mp4">
+        <video controls autoplay loop muted playsinline>
+            <source src="../assets/Paper_Video/luma/01.mp4" type="video/mp4">
+            Your browser does not support this video.
         </video>
-    </div>
-
-    <!-- Knight dying -->
-    <div class="video-prompt">
-        <h6>
-            <span style="font-size: larger; color: blue;"><strong>Input prompt: </strong></span>
-            <span style="font-size: larger;"><strong> Show a wounded female knight faltering and dramatically collapsing in a poisonous forest.</strong></span>
-        </h6>
+        <p class="label">B: Luma</p>
     </div>
     <div class="video-container">
-        <video class="regular-size-video" poster="img/teaser_frame.jpg" autoplay loop muted controls playsinline>
-          <source src="./assets/knightDye.mp4" type="video/mp4">
+        <video controls autoplay loop muted playsinline>
+            <source src="../assets/Paper_Video/pika/01.mp4" type="video/mp4">
+            Your browser does not support this video.
         </video>
-    </div>
-
-    <!-- DVA -->
-    <div class="video-prompt">
-        <h6>
-            <span style="font-size: larger; color: blue;"><strong>Input prompt: </strong></span>
-            <span style="font-size: larger;"><strong> Show D.Va relaxing in her bedroom, sitting down to snack and play video games.</strong></span>
-        </h6>
+        <p class="label">C: Pika</p>
     </div>
     <div class="video-container">
-        <video class="regular-size-video" poster="img/teaser_frame.jpg" autoplay loop muted controls playsinline>
-          <source src="./assets/DVA.mp4" type="video/mp4">
+        <video controls autoplay loop muted playsinline>
+            <source src="../assets/Paper_Video/runway/01.mp4" type="video/mp4">
+            Your browser does not support this video.
         </video>
+        <p class="label">D: Runway</p>
     </div>
+</div>
 
-    <!-- Astronaut -->
-    <div class="video-prompt">
-        <h6>
-            <span style="font-size: larger; color: blue;"><strong>Input prompt: </strong></span>
-            <span style="font-size: larger;"><strong> Show an astronaut relaxing in the conference room.</strong></span>
-        </h6>
-    </div>
-    <div class="video-container">
-        <video class="regular-size-video" poster="img/teaser_frame.jpg" autoplay loop muted controls playsinline>
-          <source src="./assets/astronaut.mp4" type="video/mp4">
-        </video>
-    </div>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSd_ifljZfNrKvHWhQ4xVfS4Pq3yeTPHm1E60Zg6bfFgFNtSzw/formResponse"
+    target="_self"
+    id="bootstrapForm"
+    method="POST">
+    <fieldset>
+        <legend>Elon - 02</legend>
+        <legend for="782115595">A man looking like Elon Musk is cheering and waving his arms, with a rocket and a Cybertruck behind him.</legend>
+        <table>
+            <tr>
+                <td>Text prompt following:</td>
+                <td><input type="radio" name="entry.685826509" value="A"> A</td>
+                <td><input type="radio" name="entry.685826509" value="B"> B</td>
+                <td><input type="radio" name="entry.685826509" value="C"> C</td>
+                <td><input type="radio" name="entry.685826509" value="D"> D</td>
+            </tr>
+            <tr>
+                <td>Visual quality:</td>
+                <td><input type="radio" name="entry.2121426000" value="A"> A</td>
+                <td><input type="radio" name="entry.2121426000" value="B"> B</td>
+                <td><input type="radio" name="entry.2121426000" value="C"> C</td>
+                <td><input type="radio" name="entry.2121426000" value="D"> D</td>
+            </tr>
+            <tr>
+                <td>Temporal consistency:</td>
+                <td><input type="radio" name="entry.2037863366" value="A"> A</td>
+                <td><input type="radio" name="entry.2037863366" value="B"> B</td>
+                <td><input type="radio" name="entry.2037863366" value="C"> C</td>
+                <td><input type="radio" name="entry.2037863366" value="D"> D</td>
+            </tr>
+            <tr>
+                <td>Overall:</td>
+                <td><input type="radio" name="entry.1525284881" value="A"> A</td>
+                <td><input type="radio" name="entry.1525284881" value="B"> B</td>
+                <td><input type="radio" name="entry.1525284881" value="C"> C</td>
+                <td><input type="radio" name="entry.1525284881" value="D"> D</td>
+            </tr>
+        </table>
+    </fieldset>
+    <input type="hidden" name="fvv" value="1">
+    <input type="hidden" name="fbzx" value="-5828965816754586881">
+    <input type="hidden" name="pageHistory" value="0">
+    <input class="btn btn-primary" type="submit" value="Submit">
+</form>
 
-    <!-- Iron Man -->
-    <div class="video-prompt">
-        <h6>
-            <span style="font-size: larger; color: blue;"><strong>Input prompt: </strong></span>
-            <span style="font-size: larger;"><strong> Show Iron Man swiftly jumping over a modern city at night, emphasizing his advanced physical capabilities and the city's nighttime glow.</strong></span>
-        </h6>
-    </div>
-    <div class="video-container">
-        <video class="regular-size-video" poster="img/teaser_frame.jpg" autoplay loop muted controls playsinline>
-          <source src="./assets/ironman.mp4" type="video/mp4">
-        </video>
-    </div>
+<hr>
+<div class="gallery">
+  <div class="video-container">
+      <video controls autoplay loop muted playsinline>
+          <source src="../assets/Paper_Video/kubrick/02.mp4" type="video/mp4">
+          Your browser does not support this video.
+      </video>
+      <p class="label">A: Kubrick</p>
+  </div>
+  <div class="video-container">
+      <video controls autoplay loop muted playsinline>
+          <source src="../assets/Paper_Video/luma/02.mp4" type="video/mp4">
+          Your browser does not support this video.
+      </video>
+      <p class="label">B: Luma</p>
+  </div>
+  <div class="video-container">
+      <video controls autoplay loop muted playsinline>
+          <source src="../assets/Paper_Video/pika/02.mp4" type="video/mp4">
+          Your browser does not support this video.
+      </video>
+      <p class="label">C: Pika</p>
+  </div>
+  <div class="video-container">
+      <video controls autoplay loop muted playsinline>
+          <source src="../assets/Paper_Video/runway/02.mp4" type="video/mp4">
+          Your browser does not support this video.
+      </video>
+      <p class="label">D: Runway</p>
+  </div>
+</div>
 
-
-    <div class="text-content"> <!-- This class is already styled for width and text alignment -->
-        <h3>Acknowledgements</h3>
-        <p>
-            Part of the work was done during Liu's internship at Baidu Research USA.
-        </p>
-        <p>
-            The website template was borrowed from 
-            <a href="http://mgharbi.com/">Michaël Gharbi</a>.
-        </p>
-    </div>
-
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSeZzcKpeqsZekKznOkjEzZQmpM3O85QYFAkSSK7N1dJvBQbpw/formResponse"
+    id="bootstrapForm" method="POST">
+  <fieldset>
+      <legend>Elon - 02</legend>
+      <legend for="782115595">A man looking like Elon Musk is cheering and waving his arms, with a rocket and a Cybertruck behind him.</legend>
+      <table>
+          <tr>
+              <td>Text prompt following:</td>
+              <td><input type="radio" name="entry.685826509" value="A"> A</td>
+              <td><input type="radio" name="entry.685826509" value="B"> B</td>
+              <td><input type="radio" name="entry.685826509" value="C"> C</td>
+              <td><input type="radio" name="entry.685826509" value="D"> D</td>
+          </tr>
+          <tr>
+              <td>Visual quality:</td>
+              <td><input type="radio" name="entry.2121426000" value="A"> A</td>
+              <td><input type="radio" name="entry.2121426000" value="B"> B</td>
+              <td><input type="radio" name="entry.2121426000" value="C"> C</td>
+              <td><input type="radio" name="entry.2121426000" value="D"> D</td>
+          </tr>
+          <tr>
+              <td>Temporal consistency:</td>
+              <td><input type="radio" name="entry.2037863366" value="A"> A</td>
+              <td><input type="radio" name="entry.2037863366" value="B"> B</td>
+              <td><input type="radio" name="entry.2037863366" value="C"> C</td>
+              <td><input type="radio" name="entry.2037863366" value="D"> D</td>
+          </tr>
+          <tr>
+              <td>Overall:</td>
+              <td><input type="radio" name="entry.1525284881" value="A"> A</td>
+              <td><input type="radio" name="entry.1525284881" value="B"> B</td>
+              <td><input type="radio" name="entry.1525284881" value="C"> C</td>
+              <td><input type="radio" name="entry.1525284881" value="D"> D</td>
+          </tr>
+      </table>
+  </fieldset>
+  <input type="hidden" name="fvv" value="1">
+  <input type="hidden" name="fbzx" value="5279572378814943727">
+  <input type="hidden" name="pageHistory" value="0">
+  <input class="btn btn-primary" type="submit" value="Submit">
+</form>
 </body>
 </html>
