@@ -1,0 +1,53 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.image-container {
+  text-align: center;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  padding: 5px;
+  background-color: #f8f8f8;
+}
+
+p {
+  color: #333;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+#label-a {
+  color: red;
+}
+
+#label-b {
+  color: blue;
+}
+
+#label-c {
+  color: green;
+}
+
+#label-d {
+  color: purple;
+}
+
+
+iframe {
+  display: block;
+  margin: auto; /* Center the iframe horizontally */
+  border: none; /* Remove the default border */
+}
