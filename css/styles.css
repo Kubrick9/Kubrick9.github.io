@@ -1,39 +1,17 @@
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Adjust based on layout needs */
-  gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: auto;
+.form-group {
+  margin-bottom: 20px;
 }
 
-.video-container {
-  text-align: center;
-  width: 100%;
+.question {
+  margin-bottom: 10px; /* Spacing between each question */
 }
 
-.regular-size-video {
-  width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  border: 1px solid #ccc;
-  background-color: #f8f8f8;
-  padding: 5px;
+.options {
+  display: flex;
+  flex-direction: column; /* Aligns items vertically */
+  align-items: flex-start; /* Aligns items to the start of the flex container */
 }
 
-.label {
-  color: #333;
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 5px;
-}
-
-#label-a { color: red; }
-#label-b { color: blue; }
-#label-c { color: green; }
-#label-d { color: purple; }
-
-@media (max-width: 768px) {
-  .gallery {
-      grid-template-columns: 1fr; /* Single column for smaller screens */
-  }
+.radio-inline {
+  margin: 5px 0; /* Adds vertical spacing between options */
 }
