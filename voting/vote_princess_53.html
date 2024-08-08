@@ -66,26 +66,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
+
         $('#bootstrapForm20').submit(function(event) {
-            event.preventDefault(); // Prevent the default form submission behavior
-            submitForm($(this)); // Call the submitForm function with the current form
+            event.preventDefault();
+            submitForm($(this));
         });
 
         function submitForm(form) {
-            var formData = form.serialize(); // Serialize the form data for submission
+            var formData = form.serialize();
             $.ajax({
-                url: form.attr('action'), // Get the action attribute from the form
-                type: 'POST', // Set method to POST
-                data: formData, // Attach the serialized data
+                url: form.attr('action'),
+                type: 'POST',
+                data: formData,
                 success: function(data) {
-                    alert('Form successfully submitted.'); // Pop-up alert on success
+                    console.log('Form successfully submitted.');
                 },
                 error: function() {
-                    alert('Error submitting form.'); // Pop-up alert on error
+                    console.error('Error submitting form.');
                 }
             });
         }
-    });
+        });
     </script>
 </head>
 <body>
