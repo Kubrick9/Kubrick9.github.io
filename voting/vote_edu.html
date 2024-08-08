@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Page</title>
+    <style>
+      table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+      }
+      th, td {
+          padding: 10px;
+          text-align: center;
+      }
+      .filled {
+          font-size: 24px; /* Adjust size as needed */
+      }
+      .gallery {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+          padding: 20px;
+          max-width: 1200px;
+          margin: auto;
+      }
+      .video-container {
+          text-align: center;
+          background-color: #f8f8f8;
+          border: 1px solid #ccc;
+          padding: 10px;
+      }
+      video {
+          width: 100%;
+          height: auto;
+      }
+      .label {
+          font-size: 16px;
+          color: #333;
+          margin-top: 8px;
+          font-weight: bold;
+      }
+      table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 20px;
+      }
+      th, td {
+          border: 1px solid #ccc;
+          padding: 8px;
+          text-align: left;
+      }
+      th {
+          background-color: #eee;
+      }
+      .radio-inline {
+          margin-right: 15px;
+      }
+  </style>
+    <!-- Include jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Include jQuery Form Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+    <script>
+$(document).ready(function() {
+    $('#bootstrapForm').submit(function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        var formData = $(this).serialize(); // Serialize the form data
+        $.ajax({
+            url: $(this).attr('action'), // URL where the form data should be posted
+            type: 'POST', // Using POST method
+            data: formData,
+            success: function(data) {
+                // Handle success silently
+                console.log('Form successfully submitted.'); // Only logs to the console
+            },
+            error: function() {
+                // Handle errors silently
+                console.error('Error submitting form.'); // Only logs to the console
+            }
+        });
+    });
+});
+
+    </script>
+</head>
+<body>
+  <form>
+    <h1>Choose the best video with respect to the following four metrics:</h1>
+    <ul>
+        <li><strong>Text following:</strong> Which video shows the scene and motion the text describes?</li>
+        <li><strong>Visual quality:</strong> Which video looks the best?</li>
+        <li><strong>Temporal consistency:</strong> Which video has consistent content and logic through time?</li>
+        <li><strong>Overall preference:</strong> Which video do you like the best overall?</li>
+    </ul>
+    <p>For example, one could think: 
+      <ul>
+        <li><strong>Text Following:</strong> Video A follows the text most closely as it both has the scene with both the cybertruck and a rocket and the motion of cheering and arm waving.</li>
+        <li><strong>Visual Quality:</strong> The visual quality of video B is the best.</li>
+        <li><strong>Temporal Consistency:</strong> Video A has the best temporal consistency, no arms breaking apart or bending in unnatural ways.</li>
+        <li><strong>Overall Preference:</strong> Overall, we prefer video A.</li>
+    </ul>    
+    </p>
+
+</form>
+
+
+  <div class="gallery">
+    <div class="video-container">
+        <video controls autoplay loop muted playsinline>
+            <source src="../assets/Paper_Video/edu/Kubrick_00.mp4" type="video/mp4">
+            Your browser does not support this video.
+        </video>
+        <p class="label">A</p>
+    </div>
+    <div class="video-container">
+        <video controls autoplay loop muted playsinline>
+            <source src="../assets/Paper_Video/edu/luma_00.mp4" type="video/mp4">
+            Your browser does not support this video.
+        </video>
+        <p class="label">B</p>
+    </div>
+    <div class="video-container">
+        <video controls autoplay loop muted playsinline>
+            <source src="../assets/Paper_Video/edu/pika_00.mp4" type="video/mp4">
+            Your browser does not support this video.
+        </video>
+        <p class="label">C</p>
+    </div>
+    <div class="video-container">
+        <video controls autoplay loop muted playsinline>
+            <source src="../assets/Paper_Video/edu/runway_00.mp4" type="video/mp4">
+            Your browser does not support this video.
+        </video>
+        <p class="label">D</p>
+    </div>
+</div>
+
+<fieldset>
+  <legend>Template Demo - 00/20</legend>
+  <p style="color: blue;">"
+  A man looking like Elon Musk is cheering and waving his arms, with a rocket and a Cybertruck behind him."</p>
+  <table>
+      <tr>
+          <td>Text prompt following:</td>
+          <td><span class="filled">&#9679;</span></td> <!-- Filled circle for A -->
+          <td>&#9675;</td> <!-- Empty circle -->
+          <td>&#9675;</td>
+          <td>&#9675;</td>
+      </tr>
+      <tr>
+          <td>Visual quality:</td>
+          <td>&#9675;</td>
+          <td>&#9675;</td>
+          <td>&#9675;</td>
+          <td><span class="filled">&#9679;</span></td> <!-- Filled circle for D -->
+      </tr>
+      <tr>
+          <td>Temporal consistency:</td>
+          <td>&#9675;</td>
+          <td><span class="filled">&#9679;</span></td> <!-- Filled circle for B -->
+          <td>&#9675;</td>
+          <td>&#9675;</td>
+      </tr>
+      <tr>
+          <td>Overall:</td>
+          <td><span class="filled">&#9679;</span></td> <!-- Filled circle for A -->
+          <td>&#9675;</td>
+          <td>&#9675;</td>
+          <td>&#9675;</td>
+      </tr>
+  </table>
+  <input class="btn btn-primary" type="submit" value="Submit">
+</fieldset>
+
+<hr> <!-- Visual separator -->
+
+<div class="navigation">
+    <button onclick="window.location.href='../index.html';">Previous Page</button>
+    <button onclick="window.location.href='./vote_elon.html';">Next Page</button>
+</div>
+
+</body>
+</html>

@@ -41,21 +41,19 @@
 <script>
 $(document).ready(function() {
     $('#bootstrapForm').submit(function(event) {
-        event.preventDefault(); // Prevent the form from submitting the default way
-
+        event.preventDefault(); // Prevent the default form submission
         var formData = $(this).serialize(); // Serialize the form data
-
         $.ajax({
-            url: $(this).attr('action'), // or the URL you are posting to
-            type: 'POST', // Use POST as method
+            url: $(this).attr('action'), // URL where the form data should be posted
+            type: 'POST', // Using POST method
             data: formData,
             success: function(data) {
-                // Handle success
-                alert('Form Submitted. Thanks.');
+                // Handle success silently
+                console.log('Form successfully submitted.'); // Only logs to the console
             },
             error: function() {
-                // Handle error
-                alert('Error submitting form.');
+                // Handle errors silently
+                console.error('Error submitting form.'); // Only logs to the console
             }
         });
     });
@@ -69,40 +67,39 @@ $(document).ready(function() {
                 <source src="../assets/Paper_Video/kubrick/20.mp4" type="video/mp4">
                 Your browser does not support this video.
             </video>
-            <p class="label">A: Kubrick</p>
+            <p class="label">A</p>
         </div>
         <div class="video-container">
             <video ccontrols autoplay loop muted playsinline>
                 <source src="../assets/Paper_Video/luma/20.mp4" type="video/mp4">
                 Your browser does not support this video.
             </video>
-            <p class="label">B: Luma</p>
+            <p class="label">B</p>
         </div>
         <div class="video-container">
             <video ccontrols autoplay loop muted playsinline>
                 <source src="../assets/Paper_Video/pika/20.mp4" type="video/mp4">
                 Your browser does not support this video.
             </video>
-            <p class="label">C: Pika</p>
+            <p class="label">C</p>
         </div>
         <div class="video-container">
             <video ccontrols autoplay loop muted playsinline>
                 <source src="../assets/Paper_Video/runway/20.mp4" type="video/mp4">
                 Your browser does not support this video.
             </video>
-            <p class="label">D: Runway</p>
+            <p class="label">D</p>
         </div>
     </div>
-</body>
 
-
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSciToh10cox4g-Zmgf5Bcscw9vcleO_tdPUcyC_sL0k1A4Q_Q/formResponse"
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSciToh10cox4g-Zmgf5Bcscw9vcleO_tdPUcyC_sL0k1A4Q_Q/formResponse"
+      
     target="_self"
     id="bootstrapForm"
     method="POST">
     <fieldset>
-        <legend>Spider Man - 01</legend>
-        <legend for="782115595">Spiderman is running on the rooftop in city night.</legend>
+        <legend>Spider Man - 05/20</legend>
+        <legend id="782115595" style="color: blue;">"Spiderman is running on the rooftop in city night."</legend>
         <table>
             <tr>
                 <td>Text prompt following:</td>
@@ -135,10 +132,16 @@ $(document).ready(function() {
         </table>
     </fieldset>
     <input type="hidden" name="fvv" value="1">
-    <input type="hidden" name="fbzx" value="-4596839218485732817">
+    <input type="hidden" name="fbzx" value="8826023214129276732">
     <input type="hidden" name="pageHistory" value="0">
     <input class="btn btn-primary" type="submit" value="Submit">
 </form>
 
-
+<hr> <!-- Visual separator -->
+<div class="navigation">
+  <button onclick="window.location.href='./vote_knight.html';">Previous Page</button>
+  <button onclick="window.location.href='./vote_princess.html';">Stop and talk with Hejun</button>
+  </div>
+  
+</body>
 </html>

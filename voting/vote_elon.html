@@ -51,23 +51,26 @@
     <!-- Include jQuery Form Plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
     <script>
-    $(document).ready(function() {
-        $('#bootstrapForm').submit(function(event) {
-            event.preventDefault(); // Prevent the form from submitting the default way
-            var formData = $(this).serialize(); // Serialize the form data
-            $.ajax({
-                url: $(this).attr('action'), // or the URL you are posting to
-                type: 'POST', // Use POST as method
-                data: formData,
-                success: function(data) {
-                    alert('Form Submitted. Thanks.');
-                },
-                error: function() {
-                    alert('Error submitting form.');
-                }
-            });
+$(document).ready(function() {
+    $('#bootstrapForm').submit(function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        var formData = $(this).serialize(); // Serialize the form data
+        $.ajax({
+            url: $(this).attr('action'), // URL where the form data should be posted
+            type: 'POST', // Using POST method
+            data: formData,
+            success: function(data) {
+                // Handle success silently
+                console.log('Form successfully submitted.'); // Only logs to the console
+            },
+            error: function() {
+                // Handle errors silently
+                console.error('Error submitting form.'); // Only logs to the console
+            }
         });
     });
+});
+
     </script>
 </head>
 <body>
@@ -77,38 +80,38 @@
             <source src="../assets/Paper_Video/kubrick/01.mp4" type="video/mp4">
             Your browser does not support this video.
         </video>
-        <p class="label">A: Kubrick</p>
+        <p class="label">A</p>
     </div>
     <div class="video-container">
         <video controls autoplay loop muted playsinline>
             <source src="../assets/Paper_Video/luma/01.mp4" type="video/mp4">
             Your browser does not support this video.
         </video>
-        <p class="label">B: Luma</p>
+        <p class="label">B</p>
     </div>
     <div class="video-container">
         <video controls autoplay loop muted playsinline>
             <source src="../assets/Paper_Video/pika/01.mp4" type="video/mp4">
             Your browser does not support this video.
         </video>
-        <p class="label">C: Pika</p>
+        <p class="label">C</p>
     </div>
     <div class="video-container">
         <video controls autoplay loop muted playsinline>
             <source src="../assets/Paper_Video/runway/01.mp4" type="video/mp4">
             Your browser does not support this video.
         </video>
-        <p class="label">D: Runway</p>
+        <p class="label">D</p>
     </div>
 </div>
 
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSd_ifljZfNrKvHWhQ4xVfS4Pq3yeTPHm1E60Zg6bfFgFNtSzw/formResponse"
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeZzcKpeqsZekKznOkjEzZQmpM3O85QYFAkSSK7N1dJvBQbpw/formResponse"      
     target="_self"
     id="bootstrapForm"
     method="POST">
     <fieldset>
-        <legend>Elon - 02</legend>
-        <legend for="782115595">A man looking like Elon Musk is cheering and waving his arms, with a rocket and a Cybertruck behind him.</legend>
+        <legend>Elon - 01/20</legend>
+        <legend id="782115595" style="color: blue;">"A man looking like Elon Musk is cheering and waving his arms, with a rocket and a Cybertruck behind him."</legend>
         <table>
             <tr>
                 <td>Text prompt following:</td>
@@ -141,7 +144,7 @@
         </table>
     </fieldset>
     <input type="hidden" name="fvv" value="1">
-    <input type="hidden" name="fbzx" value="-5828965816754586881">
+    <input type="hidden" name="fbzx" value="-4264212167933629825">
     <input type="hidden" name="pageHistory" value="0">
     <input class="btn btn-primary" type="submit" value="Submit">
 </form>
@@ -153,36 +156,37 @@
           <source src="../assets/Paper_Video/kubrick/02.mp4" type="video/mp4">
           Your browser does not support this video.
       </video>
-      <p class="label">A: Kubrick</p>
+      <p class="label">A</p>
   </div>
   <div class="video-container">
       <video controls autoplay loop muted playsinline>
           <source src="../assets/Paper_Video/luma/02.mp4" type="video/mp4">
           Your browser does not support this video.
       </video>
-      <p class="label">B: Luma</p>
+      <p class="label">B</p>
   </div>
   <div class="video-container">
       <video controls autoplay loop muted playsinline>
           <source src="../assets/Paper_Video/pika/02.mp4" type="video/mp4">
           Your browser does not support this video.
       </video>
-      <p class="label">C: Pika</p>
+      <p class="label">C</p>
   </div>
   <div class="video-container">
       <video controls autoplay loop muted playsinline>
           <source src="../assets/Paper_Video/runway/02.mp4" type="video/mp4">
           Your browser does not support this video.
       </video>
-      <p class="label">D: Runway</p>
+      <p class="label">D</p>
   </div>
 </div>
 
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSeZzcKpeqsZekKznOkjEzZQmpM3O85QYFAkSSK7N1dJvBQbpw/formResponse"
+<form action="https://docs.google.com/forms/d/e/1FAIpQLSd_ifljZfNrKvHWhQ4xVfS4Pq3yeTPHm1E60Zg6bfFgFNtSzw/formResponse"
+      
     id="bootstrapForm" method="POST">
   <fieldset>
-      <legend>Elon - 02</legend>
-      <legend for="782115595">A man looking like Elon Musk is cheering and waving his arms, with a rocket and a Cybertruck behind him.</legend>
+      <legend>Elon - 02/20</legend>
+      <legend id="782115595" style="color: blue;">"A man looking like Elon Musk is cheering and waving his arms, with a rocket and a Cybertruck behind him."</legend>
       <table>
           <tr>
               <td>Text prompt following:</td>
@@ -215,9 +219,17 @@
       </table>
   </fieldset>
   <input type="hidden" name="fvv" value="1">
-  <input type="hidden" name="fbzx" value="5279572378814943727">
+  <input type="hidden" name="fbzx" value="2250102763587781532">
   <input type="hidden" name="pageHistory" value="0">
   <input class="btn btn-primary" type="submit" value="Submit">
 </form>
+
+<hr> <!-- Visual separator -->
+
+<div class="navigation">
+    <button onclick="window.location.href='./vote_edu.html';">Previous Page</button>
+    <button onclick="window.location.href='./vote_dva.html';">Next Page</button>
+</div>
+
 </body>
 </html>

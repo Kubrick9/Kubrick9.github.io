@@ -97,89 +97,43 @@
         </div>
 
       <div class="text-content">
-          <h2>Comparison!</h2>
-          <p>Build a Comparison between Kubrick, Pika, Runway, and Luma.</p>
-          <ul style="list-style-type: none; padding: 0;"> <!-- Remove default list styling and padding -->
-              <li><a href="voting/vote_elon.html">Vote for Elon Musk's Video</a></li>
+          <h2 style="text-align: center;">Comparison</h2>
+          <p>Build a Comparison between <a href="https://kubrick9.github.io/">Kubrick</a>, <a href="https://pika.art/home">Pika</a>, <a href="https://runwayml.com/">Runway</a>, and <a href="https://lumalabs.ai/dream-machine">Luma</a>. Click to <a href="voting/vote_edu">Start Comparison</a>!
+             <!-- Remove default list styling and padding -->
+              <!-- <li><a href="voting/vote_elon.html">Start Comparison.</a></li> -->
+              <!-- <li><a href="voting/vote_elon.html">Vote for Elon Musk's Video</a></li>
               <li><a href="voting/vote_dva.html">Vote for DVA's Video</a></li>
               <li><a href="voting/vote_knight.html">Vote for a Female Knight's Video</a></li>
               <li><a href="voting/vote_princess.html">Vote for Blonde Princess's Video</a></li>
-              <li><a href="voting/vote_spiderman.html">Vote for Spider Man's Video</a></li>
-          </ul>
+              <li><a href="voting/vote_spiderman.html">Vote for Spider Man's Video</a></li> -->
+          </ul></p>
       </div>
 
+      <h2 style="text-align: center;">Demo</h2>
+      <!-- Spider Man -->
+      <div class="video-prompt">
+          <h6>
+              <span style="font-size: larger; color: blue;"><strong>Input prompt: </strong></span>
+              <span style="font-size: larger;"><strong> Spiderman is running on the rooftop in city night.</strong></span>
+          </h6>
+      </div>
+      <div class="video-container">
+          <video class="regular-size-video" poster="img/teaser_frame.jpg" autoplay loop muted controls playsinline>
+            <source src="./assets/Paper_Video/kubrick/20.mp4" type="video/mp4">
+          </video>
+      </div>
+  
+
     <div class="text-content">
-        <h2>Eureka!</h2>
-        <p>Build the first multimodal agent-based video generation pipeline through 3D engine scripting.</p>
-        <h3>How it works</h3>
+        <h2 style="text-align: center;">Abstract</h2>
+        <p>Text-to-video generation has been dominated by end-to-end diffusion-based or autoregressive models (SORA, etc.). Those novel models provide plausible versatility, but they are criticized for lack of motion and identity consistency, nor the physical-based understanding of the environment. On the other hand, film industry relies on manual Computer-generated Imagery (CGI) based on professional 3D Engine (Blender, etc.). Human-involved 3D physical-based rendering ensure quality and consistency, but it is extremely tedious and requires complex collaborations among movie making and 3D rendering experts. In this paper, we introduce a rendering-based video generation pipeline based on Vision Large Language Model (VLLM) agent collaborations. Given a random text query, multiple VLLM agents which prompted with specific rules and given retrieved expert knowledge take charge of each stage of the pipeline. They cooperate to generate Blender scripts which renders a video that best aligning the given query. Prompted by public tutorials, the Director agent with Blender-based movie making knowledge decomposes input text query into detailed sub-processes. The decomposed sub-processes guide the Programming agent to do Blender scripting based on customized function composing and official API calling. The Reviewer agent with knowledge of video quality reviews intermediate screenshots and key frames with compositional reasoning ability, in order to provide improving feedbacks to the Programmer agent. The Programmer agent improve the The reflection loop works iteratively for the best overall video outcomes. Our generated videos show better quality than commercial video generation models in 5 metrics across video quality and text alignment. Moreover, our framework outperforms on comprehensive user study in quality, consistency, and rationality.</p>
+        <h3 style="text-align: center;">How it works</h3>
         <p>Given any text prompt, multimodal agents collaborate to produce detailed Blender scripts to generate video with plausible character and motion consistency in any length.</p>
-        <h3>Demo</h3>
-    </div>
+        <div class="image-container" style="text-align:center;">
+          <img src="./index_files/LLM.png" alt="Descriptive Alt Text" style="width:auto; max-width:100%; height:auto;">
+      </div>
 
-            
-    <!-- Spider Man -->
-    <div class="video-prompt">
-        <h6>
-            <span style="font-size: larger; color: blue;"><strong>Input prompt: </strong></span>
-            <span style="font-size: larger;"><strong> Show Spider-Man jumping off a skyscraper in a metropolitan city at night, emphasizing his bold descent against the city lights.</strong></span>
-        </h6>
-    </div>
-    <div class="video-container">
-        <video class="regular-size-video" poster="img/teaser_frame.jpg" autoplay loop muted controls playsinline>
-          <source src="./assets/spiderman_video_smooth_asimov.mp4" type="video/mp4">
-        </video>
-    </div>
 
-    <!-- Knight dying -->
-    <div class="video-prompt">
-        <h6>
-            <span style="font-size: larger; color: blue;"><strong>Input prompt: </strong></span>
-            <span style="font-size: larger;"><strong> Show a wounded female knight faltering and dramatically collapsing in a poisonous forest.</strong></span>
-        </h6>
-    </div>
-    <div class="video-container">
-        <video class="regular-size-video" poster="img/teaser_frame.jpg" autoplay loop muted controls playsinline>
-          <source src="./assets/knightDye.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <!-- DVA -->
-    <div class="video-prompt">
-        <h6>
-            <span style="font-size: larger; color: blue;"><strong>Input prompt: </strong></span>
-            <span style="font-size: larger;"><strong> Show D.Va relaxing in her bedroom, sitting down to snack and play video games.</strong></span>
-        </h6>
-    </div>
-    <div class="video-container">
-        <video class="regular-size-video" poster="img/teaser_frame.jpg" autoplay loop muted controls playsinline>
-          <source src="./assets/DVA.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <!-- Astronaut -->
-    <div class="video-prompt">
-        <h6>
-            <span style="font-size: larger; color: blue;"><strong>Input prompt: </strong></span>
-            <span style="font-size: larger;"><strong> Show an astronaut relaxing in the conference room.</strong></span>
-        </h6>
-    </div>
-    <div class="video-container">
-        <video class="regular-size-video" poster="img/teaser_frame.jpg" autoplay loop muted controls playsinline>
-          <source src="./assets/astronaut.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <!-- Iron Man -->
-    <div class="video-prompt">
-        <h6>
-            <span style="font-size: larger; color: blue;"><strong>Input prompt: </strong></span>
-            <span style="font-size: larger;"><strong> Show Iron Man swiftly jumping over a modern city at night, emphasizing his advanced physical capabilities and the city's nighttime glow.</strong></span>
-        </h6>
-    </div>
-    <div class="video-container">
-        <video class="regular-size-video" poster="img/teaser_frame.jpg" autoplay loop muted controls playsinline>
-          <source src="./assets/ironman.mp4" type="video/mp4">
-        </video>
     </div>
 
 
