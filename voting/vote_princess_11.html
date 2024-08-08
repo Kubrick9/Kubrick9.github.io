@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <style>
+      .gallery {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+          padding: 20px;
+          max-width: 1200px;
+          margin: auto;
+      }
+      .video-container {
+          text-align: center;
+          background-color: #f8f8f8;
+          border: 1px solid #ccc;
+          padding: 10px;
+      }
+      video {
+          width: 100%;
+          height: auto;
+      }
+      .label {
+          font-size: 16px;
+          color: #333;
+          margin-top: 8px;
+          font-weight: bold;
+      }
+      table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-top: 20px;
+      }
+      th, td {
+          border: 1px solid #ccc;
+          padding: 8px;
+          text-align: left;
+      }
+      th {
+          background-color: #eee;
+      }
+      .radio-inline {
+          margin-right: 15px;
+      }
+  </style>
+    <!-- Include jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Include jQuery Form Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(function() {
+        $('#bootstrapForm06').submit(function(event) {
+            event.preventDefault();
+            submitForm($(this));
+        });
+
+        function submitForm(form) {
+            var formData = form.serialize();
+            $.ajax({
+                url: form.attr('action'),
+                type: 'POST',
+                data: formData,
+                success: function(data) {
+                    console.log('Form successfully submitted.');
+                },
+                error: function() {
+                    console.error('Error submitting form.');
+                }
+            });
+        }
+    });
+    </script>
+</head>
+<body>
+  <div class="gallery">
+    <div class="video-container">
+        <video controls autoplay loop muted playsinline>
+            <source src="../assets/Paper_Video/luma/05.mp4" type="video/mp4">
+            Your browser does not support this video.
+        </video>
+        <p class="label">A</p>
+    </div>
+    <div class="video-container">
+      <video controls autoplay loop muted playsinline>
+          <source src="../assets/Paper_Video/runway/05.mp4" type="video/mp4">
+          Your browser does not support this video.
+      </video>
+      <p class="label">B</p>
+  </div>
+  <div class="video-container">
+    <video controls autoplay loop muted playsinline>
+        <source src="../assets/Paper_Video/kubrick/05.mp4" type="video/mp4">
+        Your browser does not support this video.
+    </video>
+    <p class="label">C</p>
+</div>
+    <div class="video-container">
+        <video controls autoplay loop muted playsinline>
+            <source src="../assets/Paper_Video/pika/05.mp4" type="video/mp4">
+            Your browser does not support this video.
+        </video>
+        <p class="label">D</p>
+    </div>
+</div>
+
+
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLScXuPOfJBfyix9wMha40ie2D1Dn3v3GaEuBGkD6jw-ZAfRkMw/formResponse"
+      id="bootstrapForm06"  
+      target="_self"
+      method="POST">
+    <fieldset>
+        <legend>06/20</legend>
+        <p><Strong>Text description of the above videos:</Strong></p>
+        <legend id="782115595" style="color: blue;">"A princess with blonde hair is dancing and spinning on a stage."</legend>
+        <table>
+            <tr>
+                <td>Text prompt following:</td>
+                <td><input type="radio" name="entry.685826509" value="A"> A</td>
+                <td><input type="radio" name="entry.685826509" value="B"> B</td>
+                <td><input type="radio" name="entry.685826509" value="C"> C</td>
+                <td><input type="radio" name="entry.685826509" value="D"> D</td>
+            </tr>
+            <tr>
+                <td>Visual quality:</td>
+                <td><input type="radio" name="entry.2121426000" value="A"> A</td>
+                <td><input type="radio" name="entry.2121426000" value="B"> B</td>
+                <td><input type="radio" name="entry.2121426000" value="C"> C</td>
+                <td><input type="radio" name="entry.2121426000" value="D"> D</td>
+            </tr>
+            <tr>
+                <td>Temporal consistency:</td>
+                <td><input type="radio" name="entry.2037863366" value="A"> A</td>
+                <td><input type="radio" name="entry.2037863366" value="B"> B</td>
+                <td><input type="radio" name="entry.2037863366" value="C"> C</td>
+                <td><input type="radio" name="entry.2037863366" value="D"> D</td>
+            </tr>
+            <tr>
+                <td>Overall:</td>
+                <td><input type="radio" name="entry.1525284881" value="A"> A</td>
+                <td><input type="radio" name="entry.1525284881" value="B"> B</td>
+                <td><input type="radio" name="entry.1525284881" value="C"> C</td>
+                <td><input type="radio" name="entry.1525284881" value="D"> D</td>
+            </tr>
+        </table>
+    </fieldset>
+    <input type="hidden" name="fvv" value="1">
+    <input type="hidden" name="fbzx" value="-2115054633652633573">
+    <input type="hidden" name="pageHistory" value="0">
+    <input class="btn btn-primary" type="submit" value="Submit">
+</form>
+
+<hr> <!-- Visual separator -->
+
+<div class="navigation">
+    <button onclick="window.location.href='./vote_spiderman.html';">Previous Page</button>
+    <button onclick="window.location.href='./vote_princess_12.html';">Next Page</button>
+</div>
+
+</body>
+</html>

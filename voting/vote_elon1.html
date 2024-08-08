@@ -57,11 +57,6 @@
             submitForm($(this));
         });
 
-        $('#bootstrapForm02').submit(function(event) {
-            event.preventDefault();
-            submitForm($(this));
-        });
-
         function submitForm(form) {
             var formData = form.serialize();
             $.ajax({
@@ -157,89 +152,11 @@
     <input class="btn btn-primary" type="submit" value="Submit">
 </form>
 
-<hr>
-<div class="gallery">
-  <div class="video-container">
-      <video controls autoplay loop muted playsinline>
-          <source src="../assets/Paper_Video/runway/02.mp4" type="video/mp4">
-          Your browser does not support this video.
-      </video>
-      <p class="label">A</p>
-  </div>
-  <div class="video-container">
-    <video controls autoplay loop muted playsinline>
-        <source src="../assets/Paper_Video/kubrick/02.mp4" type="video/mp4">
-        Your browser does not support this video.
-    </video>
-    <p class="label">B</p>
-</div>
-<div class="video-container">
-    <video controls autoplay loop muted playsinline>
-        <source src="../assets/Paper_Video/luma/02.mp4" type="video/mp4">
-        Your browser does not support this video.
-    </video>
-    <p class="label">C</p>
-</div>
-<div class="video-container">
-    <video controls autoplay loop muted playsinline>
-        <source src="../assets/Paper_Video/pika/02.mp4" type="video/mp4">
-        Your browser does not support this video.
-    </video>
-    <p class="label">D</p>
-</div>
-</div>
-
-<form 
-  id="bootstrapForm02"
-  action="https://docs.google.com/forms/d/e/1FAIpQLSd_ifljZfNrKvHWhQ4xVfS4Pq3yeTPHm1E60Zg6bfFgFNtSzw/formResponse"
-  target="_self"
-  method="POST">
-  <fieldset>
-      <legend>02/20</legend>
-      <p><Strong>Text description of the above videos:</Strong></p>
-      <legend id="782115595" style="color: blue;">"A man looking like Elon Musk is cheering and waving his arms, with a rocket and a Cybertruck behind him."</legend>
-      <table>
-          <tr>
-              <td>Text prompt following:</td>
-              <td><input type="radio" name="entry.685826509" value="A"> A</td>
-              <td><input type="radio" name="entry.685826509" value="B"> B</td>
-              <td><input type="radio" name="entry.685826509" value="C"> C</td>
-              <td><input type="radio" name="entry.685826509" value="D"> D</td>
-          </tr>
-          <tr>
-              <td>Visual quality:</td>
-              <td><input type="radio" name="entry.2121426000" value="A"> A</td>
-              <td><input type="radio" name="entry.2121426000" value="B"> B</td>
-              <td><input type="radio" name="entry.2121426000" value="C"> C</td>
-              <td><input type="radio" name="entry.2121426000" value="D"> D</td>
-          </tr>
-          <tr>
-              <td>Temporal consistency:</td>
-              <td><input type="radio" name="entry.2037863366" value="A"> A</td>
-              <td><input type="radio" name="entry.2037863366" value="B"> B</td>
-              <td><input type="radio" name="entry.2037863366" value="C"> C</td>
-              <td><input type="radio" name="entry.2037863366" value="D"> D</td>
-          </tr>
-          <tr>
-              <td>Overall:</td>
-              <td><input type="radio" name="entry.1525284881" value="A"> A</td>
-              <td><input type="radio" name="entry.1525284881" value="B"> B</td>
-              <td><input type="radio" name="entry.1525284881" value="C"> C</td>
-              <td><input type="radio" name="entry.1525284881" value="D"> D</td>
-          </tr>
-      </table>
-  </fieldset>
-  <input type="hidden" name="fvv" value="1">
-  <input type="hidden" name="fbzx" value="2250102763587781532">
-  <input type="hidden" name="pageHistory" value="0">
-  <input class="btn btn-primary" type="submit" value="Submit">
-</form>
-
 <hr> <!-- Visual separator -->
 
 <div class="navigation">
     <button onclick="window.location.href='./vote_edu.html';">Previous Page</button>
-    <button onclick="window.location.href='./vote_dva.html';">Next Page</button>
+    <button onclick="window.location.href='./vote_elon2.html';">Next Page</button>
 </div>
 
 </body>

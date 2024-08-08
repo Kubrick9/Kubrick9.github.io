@@ -88,21 +88,21 @@ $(document).ready(function() {
   <form>
     <h1>Choose the best video with respect to the following four metrics:</h1>
     <ul>
-        <li><strong>Text following:</strong> Which video shows the scene and motion the text describes?</li>
-        <li><strong>Visual quality:</strong> Which video looks the best?</li>
-        <li><strong>Temporal consistency:</strong> Which video has consistent content and logic through time?</li>
+        <li><strong>Prompt following:</strong> Which video shows the scene and motion the text prompts?</li>
+        <li><strong>Motion Quality:</strong> Which video has fluent, diverse, and consistent motion of the character?</li>
+        <li><strong>Camera Move:</strong> Which video has the most fluent, and asesthic camera move?</li>
         <li><strong>Overall preference:</strong> Which video do you like the best overall?</li>
     </ul>
-    <p>For example, one could think: 
+    <p>Below we provide an education session as an example. After reviewing the videos below, one may think of:
       <ul>
-        <li><strong>Text Following:</strong> Video A follows the text most closely as it both has the scene with both the cybertruck and a rocket and the motion of cheering and arm waving.</li>
-        <li><strong>Visual Quality:</strong> The visual quality of video B is the best.</li>
-        <li><strong>Temporal Consistency:</strong> Video A has the best temporal consistency, no arms breaking apart or bending in unnatural ways.</li>
-        <li><strong>Overall Preference:</strong> Overall, we prefer video A.</li>
+        <li><strong>Prompt Following:</strong> Video A follows the text most closely. (B) only provides the background, (C, D) only generates the character. </li>
+        <li><strong>Motion Quality:</strong> Video (A) has the fluent, consistent, consistency of the character motion. (B) arms breaking apart; (D) still motion; (B, C) arm bending in unnatural ways.</li>
+        <li><strong>Camera Move:</strong> Video (A) has the most smooth and also diverse camera move. (B) not stable; (C, D) too still.</li>
+        <li><strong>Overall Preference:</strong> Overall, we prefer video (A), not (B) or (C) or (D).</li>
     </ul>    
     </p>
-    <p>
-      Don't forget to click the <Strong>"Submit"</Strong> button after you have made your choice.
+    <p style="color: red;">
+        <strong>Don't forget to click the <Strong>"Submit"</Strong> button after you have made your choice.</strong>
     </p>
 
 </form>
@@ -141,7 +141,7 @@ $(document).ready(function() {
 
 <fieldset>
   <legend>00/20</legend>
-  <p><Strong>Text description of the above videos:</Strong></p>
+  <p><Strong>Text prompt of the above videos:</Strong></p>
   <p style="color: blue;">"
   A man looking like Elon Musk is cheering and waving his arms, with a rocket and a Cybertruck behind him."</p>
   <table>
@@ -153,21 +153,21 @@ $(document).ready(function() {
           <td>D</td>
       </tr>
       <tr>
-          <td>Text prompt following:</td>
+          <td>Prompt following:</td>
           <td><span class="filled">&#9679;</span></td> <!-- Filled circle for A -->
           <td>&#9675;</td> <!-- Empty circle -->
           <td>&#9675;</td>
           <td>&#9675;</td>
       </tr>
       <tr>
-          <td>Visual quality:</td>
-          <td>&#9675;</td>
+          <td>Motion Quality:</td>
           <td><span class="filled">&#9679;</span></td> <!-- Filled circle for D -->
+          <td>&#9675;</td>
           <td>&#9675;</td>
           <td>&#9675;</td>
       </tr>
       <tr>
-          <td>Temporal consistency:</td>
+          <td>Camera Move:</td>
           <td><span class="filled">&#9679;</span></td> <!-- Filled circle for B -->
           <td>&#9675;</td>
           <td>&#9675;</td>
