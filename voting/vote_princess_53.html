@@ -67,21 +67,21 @@
     <script>
         $(document).ready(function() {
         $('#bootstrapForm20').submit(function(event) {
-            event.preventDefault();
-            submitForm($(this));
+            event.preventDefault(); // Prevent the default form submission behavior
+            submitForm($(this)); // Call the submitForm function with the current form
         });
 
         function submitForm(form) {
-            var formData = form.serialize();
+            var formData = form.serialize(); // Serialize the form data for submission
             $.ajax({
-                url: form.attr('action'),
-                type: 'POST',
-                data: formData,
+                url: form.attr('action'), // Get the action attribute from the form
+                type: 'POST', // Set method to POST
+                data: formData, // Attach the serialized data
                 success: function(data) {
-                    console.log('Form successfully submitted.');
+                    alert('Form successfully submitted.'); // Pop-up alert on success
                 },
                 error: function() {
-                    console.error('Error submitting form.');
+                    alert('Error submitting form.'); // Pop-up alert on error
                 }
             });
         }
@@ -127,7 +127,7 @@
   <fieldset>
       <legend>10/10</legend>
       <p><Strong>Text description of the above videos:</Strong></p>
-      <legend id="1357209190" style="color: blue;">"In an ancient castle basement, a black suit zombie walks down and drops dead, dark studio, rim lighting, two tone lighting, dimly lit."</legend>
+      <legend id="1357209190" style="color: blue;">"In an ancient castle basement, a black suited zombie walks forwards the camera, and then falls flat on his back."</legend>
       <table>
           <tr>
               <td>Prompt following</td>
