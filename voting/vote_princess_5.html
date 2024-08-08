@@ -51,24 +51,36 @@
     <!-- Include jQuery Form Plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
     <script>
-    $(document).ready(function() {
-        $('form').each(function() {
-            $(this).submit(function(event) {
-                event.preventDefault(); // Prevent the default form submission
-                var formData = $(this).serialize(); // Serialize the form data
-                $.ajax({
-                    url: $(this).attr('action'), // URL where the form data should be posted
-                    type: 'POST', // Using POST method
-                    data: formData,
-                    success: function(data) {
-                        console.log('Form successfully submitted.'); // Only logs to the console
-                    },
-                    error: function() {
-                        console.error('Error submitting form.'); // Only logs to the console
-                    }
-                });
-            });
+        $(document).ready(function() {
+        $('#bootstrapForm18').submit(function(event) {
+            event.preventDefault();
+            submitForm($(this));
         });
+
+        $('#bootstrapForm19').submit(function(event) {
+            event.preventDefault();
+            submitForm($(this));
+        });
+
+        $('#bootstrapForm20').submit(function(event) {
+            event.preventDefault();
+            submitForm($(this));
+        });
+
+        function submitForm(form) {
+            var formData = form.serialize();
+            $.ajax({
+                url: form.attr('action'),
+                type: 'POST',
+                data: formData,
+                success: function(data) {
+                    console.log('Form successfully submitted.');
+                },
+                error: function() {
+                    console.error('Error submitting form.');
+                }
+            });
+        }
     });
     </script>
 </head>
@@ -106,7 +118,7 @@
 
 
 <form action="https://docs.google.com/forms/d/e/1FAIpQLSdBetMIZtWYItfdfkfocsH18yFLzcS4QyoUziVhlz1vGipudg/formResponse"
-    id="bootstrapForm1"      
+    id="bootstrapForm18"      
     target="_self"
     method="POST">
     <fieldset>
@@ -183,7 +195,7 @@
 </div>
 
 <form action="https://docs.google.com/forms/d/e/1FAIpQLSfnEH_418TmsU8ubLhn3m6Bd3D5VMyFU-ShcwzsnB95hlNJbA/formResponse"
-  id="bootstrapForm2"
+  id="bootstrapForm19"
   target="_self"
   method="POST">
   <fieldset>
@@ -260,7 +272,7 @@
 </div>
 
 <form action="https://docs.google.com/forms/d/e/1FAIpQLSclcn8atk1zPLQEwrCviuhx9u8fzulPYPo544R_Mjh1D1SsDw/formResponse"
-  id="bootstrapForm3"
+  id="bootstrapForm20"
   target="_self"
   method="POST">
   <fieldset>
