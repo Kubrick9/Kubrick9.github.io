@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Template Page</title>
     <style>
+        #largeButton {
+          font-size: 20px;       /* Larger font size for better readability */
+          padding: 15px 30px;    /* Larger padding for a bigger button */
+          background-color: #007BFF; /* Primary blue color */
+          color: white;          /* White text color */
+          border: none;          /* No border */
+          border-radius: 5px;    /* Rounded corners */
+          cursor: pointer;       /* Cursor indicates it's clickable */
+          transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+      }
+
+      #largeButton:hover {
+          background-color: #0056b3; /* Darker blue when hovered */
+      }
+
       table, th, td {
           border: 1px solid black;
           border-collapse: collapse;
@@ -88,7 +103,7 @@ $(document).ready(function() {
   <form>
     <h1>Choose the best video with respect to the following four metrics:</h1>
     <ul>
-        <li><strong>Prompt following:</strong> Which video shows the scene and motion the text prompts?</li>
+        <li><strong>Prompt Following:</strong> Which video shows the scene and motion the text prompts?</li>
         <li><strong>Motion Quality:</strong> Which video has fluent, diverse, and consistent motion of the character?</li>
         <li><strong>Camera Move:</strong> Which video has the most fluent, and asesthic camera move?</li>
         <li><strong>Overall preference:</strong> Which video do you like the best overall?</li>
@@ -96,8 +111,8 @@ $(document).ready(function() {
     <p>Below we provide an education session as an example. After reviewing the videos below, one may think of:
       <ul>
         <li><strong>Prompt Following:</strong> Video A follows the text most closely. (B) only provides the background, (C, D) only generates the character. </li>
-        <li><strong>Motion Quality:</strong> Video (A) has the fluent, consistent, consistency of the character motion. (B) arms breaking apart; (D) still motion; (B, C) arm bending in unnatural ways.</li>
-        <li><strong>Camera Move:</strong> Video (A) has the most smooth and also diverse camera move. (B) not stable; (C, D) too still.</li>
+        <li><strong>Motion Quality</strong> Video (A) has the fluent, consistent, consistency of the character motion. (B) arms breaking apart; (D) still motion; (B, C) arm bending in unnatural ways.</li>
+        <li><strong>Camera Move</strong> Video (A) has the most smooth and also diverse camera move. (B) not stable; (C, D) too still.</li>
         <li><strong>Overall Preference:</strong> Overall, we prefer video (A), not (B) or (C) or (D).</li>
     </ul>    
     </p>
@@ -153,42 +168,43 @@ $(document).ready(function() {
           <td>D</td>
       </tr>
       <tr>
-          <td>Prompt following:</td>
+          <td>Prompt following</td>
           <td><span class="filled">&#9679;</span></td> <!-- Filled circle for A -->
           <td>&#9675;</td> <!-- Empty circle -->
           <td>&#9675;</td>
           <td>&#9675;</td>
       </tr>
       <tr>
-          <td>Motion Quality:</td>
+          <td>Motion Quality</td>
           <td><span class="filled">&#9679;</span></td> <!-- Filled circle for D -->
           <td>&#9675;</td>
           <td>&#9675;</td>
           <td>&#9675;</td>
       </tr>
       <tr>
-          <td>Camera Move:</td>
+          <td>Camera Move</td>
           <td><span class="filled">&#9679;</span></td> <!-- Filled circle for B -->
           <td>&#9675;</td>
           <td>&#9675;</td>
           <td>&#9675;</td>
       </tr>
       <tr>
-          <td>Overall:</td>
+          <td>Overall</td>
           <td><span class="filled">&#9679;</span></td> <!-- Filled circle for A -->
           <td>&#9675;</td>
           <td>&#9675;</td>
           <td>&#9675;</td>
       </tr>
   </table>
-  <input class="btn btn-primary" type="submit" value="Submit">
+  <!-- <input class="btn btn-primary" type="submit" value="Submit"> -->
+  <input class="btn btn-primary" type="submit" value="Submit" id="largeButton">
 </fieldset>
 
 <hr> <!-- Visual separator -->
 
 <div class="navigation">
     <button onclick="window.location.href='../index.html';">Previous Page</button>
-    <button onclick="window.location.href='./vote_elon.html';">Next Page</button>
+    <button onclick="window.location.href='./vote_elon2.html';">Next Page</button>
 </div>
 
 </body>
