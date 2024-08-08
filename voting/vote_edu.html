@@ -101,6 +101,9 @@ $(document).ready(function() {
         <li><strong>Overall Preference:</strong> Overall, we prefer video A.</li>
     </ul>    
     </p>
+    <p>
+      Don't forget to click the <Strong>"Submit"</Strong> button after you have made your choice.
+    </p>
 
 </form>
 
@@ -137,10 +140,18 @@ $(document).ready(function() {
 </div>
 
 <fieldset>
-  <legend>Template Demo - 00/20</legend>
+  <legend>00/20</legend>
+  <p><Strong>Text description of the above videos:</Strong></p>
   <p style="color: blue;">"
   A man looking like Elon Musk is cheering and waving his arms, with a rocket and a Cybertruck behind him."</p>
   <table>
+       <tr>
+          <td></td>
+          <td>A</td> <!-- Filled circle for A -->
+          <td>B</td> <!-- Empty circle -->
+          <td>C</td>
+          <td>D</td>
+      </tr>
       <tr>
           <td>Text prompt following:</td>
           <td><span class="filled">&#9679;</span></td> <!-- Filled circle for A -->
@@ -151,14 +162,14 @@ $(document).ready(function() {
       <tr>
           <td>Visual quality:</td>
           <td>&#9675;</td>
-          <td>&#9675;</td>
-          <td>&#9675;</td>
           <td><span class="filled">&#9679;</span></td> <!-- Filled circle for D -->
+          <td>&#9675;</td>
+          <td>&#9675;</td>
       </tr>
       <tr>
           <td>Temporal consistency:</td>
-          <td>&#9675;</td>
           <td><span class="filled">&#9679;</span></td> <!-- Filled circle for B -->
+          <td>&#9675;</td>
           <td>&#9675;</td>
           <td>&#9675;</td>
       </tr>
