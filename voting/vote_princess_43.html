@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Survey</title>
     <style>
+      #largeButton {
+          font-size: 20px;       /* Larger font size for better readability */
+          padding: 15px 30px;    /* Larger padding for a bigger button */
+          background-color: #007BFF; /* Primary blue color */
+          color: white;          /* White text color */
+          border: none;          /* No border */
+          border-radius: 5px;    /* Rounded corners */
+          cursor: pointer;       /* Cursor indicates it's clickable */
+          transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+      }
+
+      #largeButton:hover {
+          background-color: #0056b3; /* Darker blue when hovered */
+      }
       .gallery {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
@@ -150,13 +164,13 @@
   <input type="hidden" name="fvv" value="1">
   <input type="hidden" name="fbzx" value="7757357648223340871">
   <input type="hidden" name="pageHistory" value="0">
-  <input class="btn btn-primary" type="submit" value="Submit">
+  <input class="btn btn-primary" type="submit" value="Submit" id="largeButton">
 </form>
 
 <hr> <!-- Visual separator -->
 
 <div class="navigation">
-    <button onclick="window.location.href='./vote_princess_31.html';">Previous Page</button>
+    <button onclick="window.location.href='./vote_princess_23.html';">Previous Page</button>
     <button onclick="window.location.href='./vote_princess_52.html';">Next Page</button>
 </div>
 
