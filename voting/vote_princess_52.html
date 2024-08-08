@@ -65,11 +65,11 @@
     <!-- Include jQuery Form Plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
     <script>
+        $(document).ready(function() {
         $('#bootstrapForm19').submit(function(event) {
             event.preventDefault();
             submitForm($(this));
         });
-
         function submitForm(form) {
             var formData = form.serialize();
             $.ajax({
@@ -124,7 +124,7 @@
   target="_self"
   method="POST">
   <fieldset>
-      <legend>19/20</legend>
+      <legend>09/10</legend>
       <p><Strong>Text description of the above videos:</Strong></p>
       <legend id="1119846761" style="color: blue;">"In an ancient castle basement, the phantom's mask spins to the camera, dark studio, rim lighting, two tone lighting, dimly lit."</legend>
       <table>
