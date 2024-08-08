@@ -51,26 +51,25 @@
     <!-- Include jQuery Form Plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
     <script>
-$(document).ready(function() {
-    $('#bootstrapForm').submit(function(event) {
-        event.preventDefault(); // Prevent the default form submission
-        var formData = $(this).serialize(); // Serialize the form data
-        $.ajax({
-            url: $(this).attr('action'), // URL where the form data should be posted
-            type: 'POST', // Using POST method
-            data: formData,
-            success: function(data) {
-                // Handle success silently
-                console.log('Form successfully submitted.'); // Only logs to the console
-            },
-            error: function() {
-                // Handle errors silently
-                console.error('Error submitting form.'); // Only logs to the console
-            }
+    $(document).ready(function() {
+        $('form').each(function() {
+            $(this).submit(function(event) {
+                event.preventDefault(); // Prevent the default form submission
+                var formData = $(this).serialize(); // Serialize the form data
+                $.ajax({
+                    url: $(this).attr('action'), // URL where the form data should be posted
+                    type: 'POST', // Using POST method
+                    data: formData,
+                    success: function(data) {
+                        console.log('Form successfully submitted.'); // Only logs to the console
+                    },
+                    error: function() {
+                        console.error('Error submitting form.'); // Only logs to the console
+                    }
+                });
+            });
         });
     });
-});
-
     </script>
 </head>
 <body>
@@ -105,9 +104,10 @@ $(document).ready(function() {
     </div>
 </div>
 
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeZzcKpeqsZekKznOkjEzZQmpM3O85QYFAkSSK7N1dJvBQbpw/formResponse"      
+    <form 
+    id="bootstrapForm1"
+    action="https://docs.google.com/forms/d/e/1FAIpQLSeZzcKpeqsZekKznOkjEzZQmpM3O85QYFAkSSK7N1dJvBQbpw/formResponse"      
     target="_self"
-    id="bootstrapForm"
     method="POST">
     <fieldset>
         <legend>Elon - 01/20</legend>
@@ -181,9 +181,11 @@ $(document).ready(function() {
   </div>
 </div>
 
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSd_ifljZfNrKvHWhQ4xVfS4Pq3yeTPHm1E60Zg6bfFgFNtSzw/formResponse"
-      
-    id="bootstrapForm" method="POST">
+<form 
+  id="bootstrapForm2"
+  action="https://docs.google.com/forms/d/e/1FAIpQLSd_ifljZfNrKvHWhQ4xVfS4Pq3yeTPHm1E60Zg6bfFgFNtSzw/formResponse"
+  target="_self"
+  method="POST">
   <fieldset>
       <legend>Elon - 02/20</legend>
       <legend id="782115595" style="color: blue;">"A man looking like Elon Musk is cheering and waving his arms, with a rocket and a Cybertruck behind him."</legend>
