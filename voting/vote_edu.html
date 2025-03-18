@@ -33,7 +33,7 @@
       }
       .gallery {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(4, 1fr);
           gap: 20px;
           padding: 20px;
           max-width: 1200px;
@@ -112,7 +112,7 @@ $(document).ready(function() {
     <!-- <br>  -->
     
     <p>
-      Given a text prompt: <i>"A man looking like Elon Musk is cheering and waving his arms, with a rocket and a Cybertruck behind him."</i> You may watch the 4 videos below.  
+      Given a text prompt: <i>"A man looking like Elon Musk is cheering and waving his arms, with a rocket and a Cybertruck behind him."</i> You may watch the 8 videos below.  
     </p>
 
 </form>
@@ -147,6 +147,34 @@ $(document).ready(function() {
         </video>
         <p class="label">D</p>
     </div>
+    <div class="video-container">
+      <video controls autoplay loop muted playsinline>
+          <source src="../assets/Paper_Video/edu/Kubrick_00.mp4" type="video/mp4">
+          Your browser does not support this video.
+      </video>
+      <p class="label">E</p>
+  </div>
+  <div class="video-container">
+      <video controls autoplay loop muted playsinline>
+          <source src="../assets/Paper_Video/edu/luma_00.mp4" type="video/mp4">
+          Your browser does not support this video.
+      </video>
+      <p class="label">F</p>
+  </div>
+  <div class="video-container">
+      <video controls autoplay loop muted playsinline>
+          <source src="../assets/Paper_Video/edu/pika_00.mp4" type="video/mp4">
+          Your browser does not support this video.
+      </video>
+      <p class="label">G</p>
+  </div>
+  <div class="video-container">
+      <video controls autoplay loop muted playsinline>
+          <source src="../assets/Paper_Video/edu/runway_00.mp4" type="video/mp4">
+          Your browser does not support this video.
+      </video>
+      <p class="label">H</p>
+  </div>
 </div>
 
 
@@ -155,12 +183,13 @@ $(document).ready(function() {
 </p>
 
 
+<!-- TODO: Check the statement here needs to be improved -->
 <!-- <br>  -->
 <ul>
-  <li><strong>Prompt Following:</strong> (A) follows the text most closely. (B) only provides the background, (C, D) only generates the character. </li>
-  <li><strong>Motion Quality:</strong> (A) has the most natural, fluent, and consistent character motion. (B) arms breaking apart; (D) too still motion; (B, C) arms bending unnaturally.</li>
-  <li><strong>Camera Move:</strong> (A) has the most smooth and also diverse camera move. (B) not stable; (C, D) too still.</li>
-  <li><strong>Overall Preference:</strong> Overall, we prefer video (A), not (B) or (C) or (D).</li>
+  <li><strong>Prompt Following:</strong> (A) follows the text most closely. (B) only provides the background, (C, D, E, F, G, H) only generates the character. </li>
+  <li><strong>Motion Quality:</strong> (A) has the most natural, fluent, and consistent character motion. (B) arms breaking apart; (D) too still motion; (B, C, E, F, G, H) arms bending unnaturally.</li>
+  <li><strong>Camera Move:</strong> (A) has the most smooth and also diverse camera move. (B) not stable; (C, D, E, F, G, H) too still.</li>
+  <li><strong>Overall Preference:</strong> Overall, we prefer video (A), not (B) or (C) or (D) or (E) or (F) or (G) or (H).</li>
 </ul>    
 </p>
 
@@ -187,6 +216,10 @@ $(document).ready(function() {
           <td>B</td> <!-- Empty circle -->
           <td>C</td>
           <td>D</td>
+          <td>E</td>
+          <td>F</td>
+          <td>G</td>
+          <td>H</td>
       </tr>
       <tr>
           <td>Prompt following</td>
@@ -194,10 +227,18 @@ $(document).ready(function() {
           <td>&#9675;</td> <!-- Empty circle -->
           <td>&#9675;</td>
           <td>&#9675;</td>
+          <td>&#9675;</td>
+          <td>&#9675;</td>
+          <td>&#9675;</td>
+          <td>&#9675;</td>
       </tr>
       <tr>
           <td>Motion Quality</td>
           <td><span class="filled">&#9679;</span></td> <!-- Filled circle for D -->
+          <td>&#9675;</td>
+          <td>&#9675;</td>
+          <td>&#9675;</td>
+          <td>&#9675;</td>
           <td>&#9675;</td>
           <td>&#9675;</td>
           <td>&#9675;</td>
@@ -208,10 +249,18 @@ $(document).ready(function() {
           <td>&#9675;</td>
           <td>&#9675;</td>
           <td>&#9675;</td>
+          <td>&#9675;</td>
+          <td>&#9675;</td>
+          <td>&#9675;</td>
+          <td>&#9675;</td>
       </tr>
       <tr>
           <td>Overall</td>
           <td><span class="filled">&#9679;</span></td> <!-- Filled circle for A -->
+          <td>&#9675;</td>
+          <td>&#9675;</td>
+          <td>&#9675;</td>
+          <td>&#9675;</td>
           <td>&#9675;</td>
           <td>&#9675;</td>
           <td>&#9675;</td>

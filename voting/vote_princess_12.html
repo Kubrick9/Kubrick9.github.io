@@ -21,7 +21,7 @@
       }
       .gallery {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: repeat(4, 1fr);
           gap: 20px;
           padding: 20px;
           max-width: 1200px;
@@ -119,6 +119,34 @@
       </video>
       <p class="label">D</p>
   </div>
+  <div class="video-container">
+    <video ccontrols autoplay loop muted playsinline>
+        <source src="../assets/Paper_Video/luma/03.mp4" type="video/mp4">
+        Your browser does not support this video.
+    </video>
+    <p class="label">E</p>
+</div>
+<div class="video-container">
+    <video ccontrols autoplay loop muted playsinline>
+        <source src="../assets/Paper_Video/pika/03.mp4" type="video/mp4">
+        Your browser does not support this video.
+    </video>
+    <p class="label">F</p>
+</div>
+    <div class="video-container">
+        <video ccontrols autoplay loop muted playsinline>
+            <source src="../assets/Paper_Video/kubrick/03.mp4" type="video/mp4">
+            Your browser does not support this video.
+        </video>
+        <p class="label">G</p>
+    </div>
+    <div class="video-container">
+        <video ccontrols autoplay loop muted playsinline>
+            <source src="../assets/Paper_Video/runway/03.mp4" type="video/mp4">
+            Your browser does not support this video.
+        </video>
+        <p class="label">H</p>
+    </div>
 </div>
 
   <form 
@@ -135,34 +163,50 @@
         "A princess is dancing and spinning on the stage. The scene light changes from extremely dark to spotlight."
       </legend>
       <table>
-          <tr>
-              <td>Prompt following</td>
-              <td><input type="radio" name="entry.207685117" value="A"> A</td>
-              <td><input type="radio" name="entry.207685117" value="B"> B</td>
-              <td><input type="radio" name="entry.207685117" value="C"> C</td>
-              <td><input type="radio" name="entry.207685117" value="D"> D</td>
-          </tr>
-          <tr>
-              <td>Motion Quality</td>
-              <td><input type="radio" name="entry.794197138" value="A"> A</td>
-              <td><input type="radio" name="entry.794197138" value="B"> B</td>
-              <td><input type="radio" name="entry.794197138" value="C"> C</td>
-              <td><input type="radio" name="entry.794197138" value="D"> D</td>
-          </tr>
-          <tr>
-              <td>Camera Move</td>
-              <td><input type="radio" name="entry.773463062" value="A"> A</td>
-              <td><input type="radio" name="entry.773463062" value="B"> B</td>
-              <td><input type="radio" name="entry.773463062" value="C"> C</td>
-              <td><input type="radio" name="entry.773463062" value="D"> D</td>
-          </tr>
-          <tr>
-              <td>Overall</td>
-              <td><input type="radio" name="entry.829000982" value="A"> A</td>
-              <td><input type="radio" name="entry.829000982" value="B"> B</td>
-              <td><input type="radio" name="entry.829000982" value="C"> C</td>
-              <td><input type="radio" name="entry.829000982" value="D"> D</td>
-          </tr>
+        <tr>
+          <td>Prompt following</td>
+          <td><input type="radio" name="entry.207685117" value="A"> A</td>
+          <td><input type="radio" name="entry.207685117" value="B"> B</td>
+          <td><input type="radio" name="entry.207685117" value="C"> C</td>
+          <td><input type="radio" name="entry.207685117" value="D"> D</td>
+          <td><input type="radio" name="entry.207685117" value="E"> E</td>
+          <td><input type="radio" name="entry.207685117" value="F"> F</td>
+          <td><input type="radio" name="entry.207685117" value="G"> G</td>
+          <td><input type="radio" name="entry.207685117" value="H"> H</td>
+      </tr>
+      <tr>
+          <td>Motion Quality</td>
+          <td><input type="radio" name="entry.794197138" value="A"> A</td>
+          <td><input type="radio" name="entry.794197138" value="B"> B</td>
+          <td><input type="radio" name="entry.794197138" value="C"> C</td>
+          <td><input type="radio" name="entry.794197138" value="D"> D</td>
+          <td><input type="radio" name="entry.794197138" value="E"> E</td>
+          <td><input type="radio" name="entry.794197138" value="F"> F</td>
+          <td><input type="radio" name="entry.794197138" value="G"> G</td>
+          <td><input type="radio" name="entry.794197138" value="H"> H</td>
+      </tr>
+      <tr>
+          <td>Camera Move</td>
+          <td><input type="radio" name="entry.773463062" value="A"> A</td>
+          <td><input type="radio" name="entry.773463062" value="B"> B</td>
+          <td><input type="radio" name="entry.773463062" value="C"> C</td>
+          <td><input type="radio" name="entry.773463062" value="D"> D</td>
+          <td><input type="radio" name="entry.773463062" value="E"> E</td>
+          <td><input type="radio" name="entry.773463062" value="F"> F</td>
+          <td><input type="radio" name="entry.773463062" value="G"> G</td>
+          <td><input type="radio" name="entry.773463062" value="H"> H</td>
+      </tr>
+      <tr>
+          <td>Overall</td>
+          <td><input type="radio" name="entry.829000982" value="A"> A</td>
+          <td><input type="radio" name="entry.829000982" value="B"> B</td>
+          <td><input type="radio" name="entry.829000982" value="C"> C</td>
+          <td><input type="radio" name="entry.829000982" value="D"> D</td>
+          <td><input type="radio" name="entry.829000982" value="E"> E</td>
+          <td><input type="radio" name="entry.829000982" value="F"> F</td>
+          <td><input type="radio" name="entry.829000982" value="G"> G</td>
+          <td><input type="radio" name="entry.829000982" value="H"> H</td>
+      </tr>      
       </table>
   </fieldset>
   <input type="hidden" name="fvv" value="1">
